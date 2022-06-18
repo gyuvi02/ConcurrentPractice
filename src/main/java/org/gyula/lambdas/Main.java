@@ -8,11 +8,13 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
 //        new Thread(()-> {
 //            System.out.println("Printing from the Runnable");
 //            System.out.println("Line 2");
 //            System.out.format("This is line %d\n", 3);
 //        }).start();
+
 
 
         Employee john = new Employee("John Doe", 30);
@@ -47,6 +49,7 @@ public class Main {
             System.out.println(employee.getName());
         }
 
+
         UpperConcat uc = (s1, s2) -> s1.toUpperCase()+s2.toUpperCase();
         System.out.println(uc.upperConcat(employees.get(0).getName(), employees.get(1).getName()));
 
@@ -69,7 +72,6 @@ public class Main {
         return uc.upperConcat(s1, s2);
     }
 }
-
 
 
 class Employee {
@@ -96,6 +98,7 @@ class Employee {
     public void setAge(int age) {
         this.age = age;
     }
+
 }
 //@FunctionalInterface
 //interface UpperConcat {
@@ -119,3 +122,4 @@ class AnotherClass {
         return Main.doStringStuff(uc,"String1","String2");
     }
 }
+
